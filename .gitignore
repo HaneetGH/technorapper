@@ -1,0 +1,33 @@
+# Secrets stay in the environment. Never commit them.
+.env
+.env.*
+!.env.example
+secrets/
+*.secret
+*.pem
+*.key
+
+# Local copies of the site and rollback backups.
+website/**
+!website/.gitkeep
+backups/**
+!backups/.gitkeep
+
+# WordPress trees, uploads, and config dropped outside those folders.
+/wp-admin/
+/wp-content/
+/wp-includes/
+/wp-config.php
+wp-config.php
+**/wp-config.php
+uploads/
+**/uploads/
+
+# Database dumps and archives of the site.
+dumps/
+*.sql
+*.sql.gz
+*.sql.zip
+*.dump
+
+.DS_Store
